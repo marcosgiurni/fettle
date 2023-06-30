@@ -29,25 +29,25 @@ function useSystemStatus() {
                 
                 if (services.every((item) => item.status === "success")) {
                     setSystemStatus({
-                        title: "All System Operational",
+                        title: "Todos os sistemas operantes",
                         status: Status.OPERATIONAL,
                         datetime: services[0].date
                     });
                 } else if (services.every((item) => item.status === "failed")) {
                     setSystemStatus({
-                        title: "Outage",
+                        title: "Indisponível",
                         status: Status.OUTAGE,
                         datetime: services[0].date
                      });
                 } else if (services.every((item) => item.status === "")) {
                     setSystemStatus({
-                        title: "Unknown",
+                        title: "Desconhecido",
                         status: Status.UNKNOWN,
                         datetime: services[0].date
                     });
                 } else {
                     setSystemStatus({
-                        title: "Partial Outage",
+                        title: "Indisponibilidade Parcial",
                         status: Status.PARTIAL_OUTAGE,
                         datetime: services[0].date
                     });
