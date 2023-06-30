@@ -6,6 +6,7 @@ const nextConfig = {
   assetPrefix: production ? '/' : '',
   reactStrictMode: true,
   swcMinify: true,
+  basePath: '/fettle',
 }
 
 module.exports = nextConfig
